@@ -1,0 +1,28 @@
+<h1 class="text-center">Material Magic</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <mat-grid-list
+        cols="4"
+        rowHeight="fit"
+        style="height: 200px"
+        gutterSize="2px"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-6"></div>
+          </div>
+        </div>
+        <mat-grid-tile
+          *ngFor="let tile of tiles"
+          [colspan]="tile.cols"
+          [rowspan]="tile.rows"
+          [style.background]="tile.color"
+        >
+          <img class="tile-image" src="https://picsum.photos/200/300/?random" />
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
+</div>

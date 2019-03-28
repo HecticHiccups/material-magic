@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -13,7 +14,7 @@ import {
 import { MatGridListModule } from "@angular/material/grid-list";
 import { FormsModule } from "@angular/forms";
 import { ArtComponent } from "./components/art/art.component";
-import { HeaderComponent } from './components/layout/header/header.component';
+import { HeaderComponent } from "./components/layout/header/header.component";
 
 @NgModule({
   declarations: [AppComponent, ArtComponent, HeaderComponent],
@@ -28,7 +29,8 @@ import { HeaderComponent } from './components/layout/header/header.component';
     MatButtonModule,
     MatSelectModule,
     MatIconModule,
-    MatGridListModule
+    MatGridListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

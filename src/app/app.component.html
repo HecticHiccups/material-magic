@@ -1,19 +1,2 @@
 <app-header></app-header>
 <router-outlet></router-outlet>
-<mat-form-field>
-  <input matInput placeholder="Simple Input" [(ngModel)]="title" />
-</mat-form-field>
-
-<mat-icon>home</mat-icon>
-
-<button mat-raised-button color="accent">I'm a button</button>
-
-<div class="text-center">
-  <mat-form-field>
-    <mat-select placeholder="I'm a select" [(ngModel)]="selectedValue">
-      <mat-option *ngFor="let item of items" [value]="item.value">
-        {{ item.view }}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-</div>

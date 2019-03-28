@@ -1,46 +1,70 @@
-import { Component, OnInit } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  AfterContentInit,
+  ViewChild,
+  EventEmitter,
+  Output
+} from "@angular/core";
 import { ImageService } from "../../services/image.service";
+import { MediaChange, MediaObserver } from "@angular/flex-layout";
+import { MatGridList } from "@angular/material";
 
 @Component({
   selector: "app-art",
   templateUrl: "./art.component.html",
   styleUrls: ["./art.component.scss"]
 })
-export class ArtComponent implements OnInit {
+export class ArtComponent implements OnInit, AfterContentInit {
+  //GridList reference
+  @ViewChild("grid") grid: MatGridList;
+
+  //Images array
   public images: [];
-  breakpoint: number;
+  start: number = 30;
+  end: number = 34;
 
-  //When the screen resizes, I want the columns to adjust.
+  //Object determine col size.
+  gridByBreakpoint = {
+    xl: 8,
+    lg: 6,
+    md: 4,
+    sm: 2,
+    xs: 1
+  };
 
-  constructor(private imageService: ImageService) {
+  //Inject Services, & Media Observer
+  constructor(
+    private imageService: ImageService,
+    private observableMedia: MediaObserver
+  ) {
     this.images = [];
   }
 
   /**
-   * !Retrieve images from service store them in images array.
+   * Retrieve images from service store them in images array.
    */
   ngOnInit() {
     this.imageService.getImages().subscribe(img => {
       this.images = img;
     });
-
-    this.breakpoint = window.innerWidth <= 400 ? 1 : 6;
   }
 
-  // onResize(event) {
-  //   this.breakpoint = event.target.innerWidth <= 400 ? 1 : 6;
-  // }
-
-  // setCol() {
-  //   let imgList = this.images.slice(0, 4);
-  //   return imgList.length <= 12 ? 12 : imgList.length;
-  // }
   /**
-  tiles: Tile[] = [
-    { text: "One", cols: 1, rows: 2, color: "lightblue" },
-    { text: "Two", cols: 1, rows: 2, color: "lightgreen" },
-    { text: "Three", cols: 1, rows: 2, color: "lightpink" },
-    { text: "Four", cols: 1, rows: 2, color: "#DDBDF1" }
-  ];
-*/
+   * Change the gridlist columns based on media screen size.
+   */
+  ngAfterContentInit() {
+    this.observableMedia.media$.subscribe((change: MediaChange) => {
+      this.grid.cols = this.gridByBreakpoint[change.mqAlias];
+    });
+  }
+
+  /**
+   * Increase the size by with only end.
+   * Change the initial index range with both.
+   */
+  onMagic(start, end) {
+    this.start = start += 4;
+    this.end = end += 4;
+  }
 }

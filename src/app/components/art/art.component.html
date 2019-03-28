@@ -2,8 +2,8 @@
   <div class="row">
     <div class="col">
       <h1 class="text-center">Material Magic</h1>
-      <mat-grid-list [cols]="4" rowHeight="2:2">
-        <mat-grid-tile *ngFor="let tile of images.slice(0, 4)">
+      <mat-grid-list #grid cols="4" rowHeight="2:2">
+        <mat-grid-tile *ngFor="let tile of images.slice(start, end)">
           <img
             class="tile-image"
             src="https://picsum.photos/200/300/?image={{ tile.id }}"
@@ -11,6 +11,18 @@
           />
         </mat-grid-tile>
       </mat-grid-list>
+      <div class="d-block mx-auto text-center">
+        <div class="btn-group-vertical">
+          <button
+            (click)="onMagic(start, end)"
+            id="m-btn"
+            mat-raised-button
+            color="accent"
+          >
+            Magic
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

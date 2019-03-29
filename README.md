@@ -1,10 +1,10 @@
 # MaterialMagic
 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
+
 ## Check it out Deployed on Zeit Now
 
 https://my-new-app.hectic.now.sh/
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
 
 ## Development server
 

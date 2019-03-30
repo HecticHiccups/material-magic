@@ -2,6 +2,8 @@
 
 > A responsive image grid with Angular Material GridList.
 
+[![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
 
 ## Check it out, Deployed on Zeit Now

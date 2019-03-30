@@ -1,16 +1,46 @@
 # MaterialMagic
 
+> A responsive image grid with Angular Material GridList.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
 
-## Check it out Deployed on Zeit Now
+## Check it out, Deployed on Zeit Now
 
-[Material](https://my-new-app.hectic.now.sh/).
+https://my-new-app.hectic.now.sh/
 
-[AA](https://helpx.adobe.com/experience-manager/6-3/sites/classic-ui-authoring/using/classic-page-author-accessible-content.html).
+## Installation
 
-[Zeit](https://zeit.co/guides/deploying-angular-with-now/)
+### Clone/Fork the Repo
 
-[Picsum API](https://picsum.photos/)
+- Create a fork of this repo and then clone this repo to your local machine using `git clone https://github.com/YOURUSERNAME/material-magic.git`
+
+### Setup
+
+> install dependencies
+
+```bash
+$ npm install
+```
+
+> your ready to go!
+
+```bash
+$ ng serve  or  ng serve --open
+```
+
+## Resources
+
+[AA](https://helpx.adobe.com/experience-manager/6-3/sites/classic-ui-authoring/using/classic-page-author-accessible-content.html) -- AA Conformance.
+
+[Zeit](https://zeit.co/guides/deploying-angular-with-now/) -- Zeit Now Deployment.
+
+[Picsum API](https://picsum.photos/) -- Image API
+
+## License
+
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+
+- Copyright 2019 © HecticHiccups
 
 ## Development server
 

@@ -1,11 +1,4 @@
-import {
-  Component,
-  OnInit,
-  AfterContentInit,
-  ViewChild,
-  EventEmitter,
-  Output
-} from "@angular/core";
+import { Component, OnInit, AfterContentInit, ViewChild } from "@angular/core";
 import { ImageService } from "../../services/image.service";
 import { MediaChange, MediaObserver } from "@angular/flex-layout";
 import { MatGridList } from "@angular/material";

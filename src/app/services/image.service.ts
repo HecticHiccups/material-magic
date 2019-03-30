@@ -10,13 +10,10 @@ export class ImageService {
   tasks: [];
   constructor(private http: HttpClient) {}
 
-  //GET List of Images
-  // async getImages() {
-  //   const response = await fetch("https://picsum.photos/list");
-  //   const data = await response.json();
-  //   return data;
-  // }
-
+  /** GET request to picsum API
+   * @Return Observable List
+   *
+   */
   getImages(): Observable<[]> {
     return this.http.get<[]>(`${this.imgUrl}`);
   }

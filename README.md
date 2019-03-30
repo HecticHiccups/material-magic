@@ -4,7 +4,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Check it out Deployed on Zeit Now
 
-https://my-new-app.hectic.now.sh/
+[Material](https://my-new-app.hectic.now.sh/).
+
+[AA](https://helpx.adobe.com/experience-manager/6-3/sites/classic-ui-authoring/using/classic-page-author-accessible-content.html).
+
+[Zeit](https://zeit.co/guides/deploying-angular-with-now/)
+
+[Picsum API](https://picsum.photos/)
 
 ## Development server
 
